@@ -1,0 +1,12 @@
+--INSERT INTO atores (nome) VALUES ('Brad Pitt');
+--INSERT INTO atores (nome) VALUES ('Christian Bale');
+--INSERT INTO atores (nome) VALUES ('Felicity Jones');
+
+--INSERT INTO generos (titulo) VALUES ('Comédia');
+--INSERT INTO generos (titulo) VALUES ('Terror');
+--INSERT INTO generos (titulo) VALUES ('Drama');
+
+--INSERT INTO filmes (titulo, id_genero, valor) VALUES ('Batman Cavaleiro das Trevas', 3, 15.99);
+--INSERT INTO filmes (titulo, id_genero, valor) VALUES ('Gente Grande', 1, 10.99);
+--INSERT INTO filmes (titulo, id_genero, valor) VALUES ('Doutor Estranho no Multiverso', 2, 15.99);
+
