@@ -1,6 +1,6 @@
---INSERT INTO atores (nome) VALUES ('Brad Pitt');
---INSERT INTO atores (nome) VALUES ('Christian Bale');
---INSERT INTO atores (nome) VALUES ('Felicity Jones');
+INSERT INTO atores (nome) VALUES ('Brad Pitt');
+INSERT INTO atores (nome) VALUES ('Christian Bale');
+INSERT INTO atores (nome) VALUES ('Felicity Jones');
 
 --INSERT INTO generos (titulo) VALUES ('Comédia');
 --INSERT INTO generos (titulo) VALUES ('Terror');
@@ -9,4 +9,34 @@
 --INSERT INTO filmes (titulo, id_genero, valor) VALUES ('Batman Cavaleiro das Trevas', 3, 15.99);
 --INSERT INTO filmes (titulo, id_genero, valor) VALUES ('Gente Grande', 1, 10.99);
 --INSERT INTO filmes (titulo, id_genero, valor) VALUES ('Doutor Estranho no Multiverso', 2, 15.99);
+
+--INSERT INTO atores_filme(personagem, id_filme, id_ator) VALUES ('Batman', 1, 2);
+--INSERT INTO atores_filme(personagem, id_filme, id_ator) VALUES ('Tia', 2, 3);
+--INSERT INTO atores_filme(personagem, id_filme, id_ator) VALUES ('Mago', 3, 1);
+
+--INSERT INTO clientes (nome, sobrenome, telefone, endereco) VALUES ('João', 'Silva', '(10) 1234-5678', 'Rua lá mesmo, 90');
+--INSERT INTO clientes (nome, sobrenome, telefone, endereco) VALUES ('Julia', 'Figueira', '(10) 2453-5678', 'Rua lá mesmo, 80');
+--INSERT INTO clientes (nome, sobrenome, telefone, endereco) VALUES ('Barbara', 'Nogueira', '(10) 6757-5678', 'Rua aqui, 190');
+
+--INSERT INTO dvds(id_filme, quantidade) VALUES (1, 100);
+--INSERT INTO dvds(id_filme, quantidade) VALUES (2, 50);
+--INSERT INTO dvds(id_filme, quantidade) VALUES (3, 20);
+
+--INSERT INTO emprestimos (data, id_cliente) VALUES ('06/09/2022', 1);
+--INSERT INTO emprestimos (data, id_cliente) VALUES ('04/02/2022', 2);
+--INSERT INTO emprestimos (data, id_cliente) VALUES ('02/10/2022', 3);
+
+--INSERT INTO filmes_emprestimo(id_emprestimo, id_dvd) VALUES (1, 2);
+--INSERT INTO filmes_emprestimo(id_emprestimo, id_dvd) VALUES (2, 3);
+--INSERT INTO filmes_emprestimo(id_emprestimo, id_dvd) VALUES (3, 1);
+
+--INSERT INTO devolucoes (id_emprestimo, data) VALUES (1, '10/09/2022');
+--INSERT INTO devolucoes (id_emprestimo, data) VALUES (2, '9/02/2022');
+--INSERT INTO devolucoes (id_emprestimo, data) VALUES (3, '10/10/2022');
+
+--INSERT INTO filmes_devolucao (id_devolucao, id_filme_emprestimo) VALUES (1, 2);
+--INSERT INTO filmes_devolucao (id_devolucao, id_filme_emprestimo) VALUES (2, 3);
+--INSERT INTO filmes_devolucao (id_devolucao, id_filme_emprestimo) VALUES (3, 1);
+
+
 
