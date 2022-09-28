@@ -1,0 +1,28 @@
+SELECT * FROM filmes;
+
+--SELECT * FROM generos;
+
+--SELECT * FROM atores;
+
+--SELECT * FROM atores_filme;
+
+--SELECT * FROM clientes;
+
+--SELECT f.titulo, g.titulo AS genero, f.valor FROM filmes AS f, generos AS g WHERE f.id_genero = g.id;
+
+--SELECT f.titulo, a.nome, af.personagem 
+--	FROM filmes AS f, atores as a, atores_filme as af
+--	WHERE af.id_filme = f.id AND af.id_ator = a.id;
+
+--SELECT * FROM generos WHERE id = 1;
+--SELECT * FROM generos WHERE titulo = 'Drama';
+
+--SELECT sum(valor) FROM filmes;
+--SELECT max(valor) FROM filmes;
+
+--SELECT * FROM filmes WHERE valor IN (SELECT max(valor) FROM filmes);
+
+
+
+
+
