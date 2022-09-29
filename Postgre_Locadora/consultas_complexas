@@ -1,0 +1,20 @@
+--Todos os filmes de um ator
+SELECT f.titulo, g.titulo, af.personagem 
+	FROM filmes AS f, generos AS g, atores_filme AS af, atores AS a
+	WHERE f.id = af.id_filme AND g.id = f.id_genero AND af.id_ator = a.id AND a.nome = 'Christian Bale';
+
+--Todos os filmes de um ator por gênero
+SELECT f.titulo, af.personagem 
+	FROM filmes AS f, generos AS g, atores_filme AS af, atores AS a
+	WHERE f.id = af.id_filme AND g.id = f.id_genero AND af.id_ator = a.id AND a.nome = 'Christian Bale' AND g.titulo = 'Drama';
+	
+--Emprestimos
+SELECT e.id, c.nome, c.sobrenome, e.data, f.titulo 
+	FROM emprestimos AS e, clientes AS c, filmes AS f, filmes_emprestimo AS fe, dvds AS d, generos AS g
+	WHERE c.id = e.id_cliente AND f.id_genero = g.id AND fe.id_emprestimo = e.id AND fe.id_dvd = d.id AND d.id_filme = f.id;
+	
+--Devoluções
+SELECT d.id, c.nome, c.sobrenome, d.data, f.titulo
+	FROM clientes AS c, devolucoes AS d, filmes AS f, filmes_devolucao AS fd, emprestimos AS e, filmes_emprestimo AS fe, dvds AS dv
+	WHERE fd.id_filme_emprestimo = fe.id AND f.id = dv.id_filme AND fe.id_dvd = dv.id AND c.id = e.id_cliente AND fe.id_emprestimo = e.id AND fd.id_devolucao = d.id;
+
