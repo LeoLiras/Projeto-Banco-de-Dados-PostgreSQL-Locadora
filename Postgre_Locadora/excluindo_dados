@@ -1,0 +1,11 @@
+--Deletando um filme
+--Não é possível deletar dados de tabelas que estão interligadas, pois isso prejudicaria a integridade do banco de dados;
+--Assim, é preciso começar primeiro deletando os dados relativos as chaves estrangeiras, seguindo o fluxo inverso ao fluxo da inserção de dados;
+-- Por exemplo, a inserção ocorre no seguinte fluxo -> filme, gênero, empréstimo, devolucao. Para deletar esses dados, porém, deve-se seguir o fluxo inverso;
+
+DELETE FROM filmes_devolucao WHERE id = 1;
+DELETE FROM filmes_emprestimo WHERE id = 1;
+DELETE FROM dvds WHERE id = 1;
+DELETE FROM atores_filme WHERE id = 1;
+DELETE FROM filmes WHERE id = 1;
+
