@@ -1,0 +1,9 @@
+SELECT * FROM atores;
+
+UPDATE atores SET nome = 'Gal Gadot' WHERE id = 3;
+--Jamais esquecer o WHERE ao usar o UPDATE;
+
+SELECT * FROM emprestimos;
+
+UPDATE emprestimos SET data = '2022-09-04' WHERE id = 2;
+--Jamais esquecer o WHERE ao usar o UPDATE;
