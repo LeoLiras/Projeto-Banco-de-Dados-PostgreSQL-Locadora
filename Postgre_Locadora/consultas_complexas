@@ -14,7 +14,12 @@ SELECT e.id, c.nome, c.sobrenome, e.data, f.titulo
 	WHERE c.id = e.id_cliente AND f.id_genero = g.id AND fe.id_emprestimo = e.id AND fe.id_dvd = d.id AND d.id_filme = f.id;
 	
 --Devoluções
-SELECT d.id, c.nome, c.sobrenome, d.data, f.titulo
-	FROM clientes AS c, devolucoes AS d, filmes AS f, filmes_devolucao AS fd, emprestimos AS e, filmes_emprestimo AS fe, dvds AS dv
-	WHERE fd.id_filme_emprestimo = fe.id AND f.id = dv.id_filme AND fe.id_dvd = dv.id AND c.id = e.id_cliente AND fe.id_emprestimo = e.id AND fd.id_devolucao = d.id;
-
+SELECT dev.id, c.nome, c.sobrenome, dev.data, f.titulo
+	FROM devolucoes AS dev, clientes AS c, filmes AS f, dvds AS dv, emprestimos AS e, filmes_devolucao AS fd, filmes_emprestimo AS fe
+	WHERE dev.id_emprestimo = e.id AND dv.id_filme = f.id AND e.id_cliente = c.id AND fd.id_devolucao = dev.id AND fd.id_filme_emprestimo = fe.id AND fe.id_dvd = dv.id;
+	
+--Pagamentos dos clientes 
+SELECT e.id, c.nome, c.sobrenome, f.titulo, SUM(f.valor)
+	FROM emprestimos AS e, clientes AS c, filmes AS f, dvds AS dv, filmes_emprestimo as fe
+	WHERE e.id_cliente = c.id AND dv.id_filme = f.id AND fe.id_emprestimo = e.id AND fe.id_dvd = dv.id
+	GROUP BY e.id, c.nome, c.sobrenome, f.titulo;
